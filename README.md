@@ -14,14 +14,14 @@ The TTL is set to "Auto" and it won't enable Cloudflare Proxy.
 ## How to use
 
 1. Setup the NodeJS application
-   1.1 (Preferred). Clone this repo and let it run somewhere, on a server or your NAS directly (I didn't test that though). !! Important: Rename .env.example to .env. There you can change the environment variables !!
-   1.2. As of time of writing this, I have an instance of the program running on my own server at `dsmddnscloudflare.abmgrt.dev`. If you can't setup an own instance of the application, you can use this domain in the next step. But remember that I can change the domain or shut down this instance at any time. **By using this instance that this domain you agree that you are responsible for any type of damage. While unlikely, you're still sharing your Cloudflare API Token with my server.**
+   - 1.1 (Preferred). Clone this repo and let it run somewhere, on a server or your NAS directly (I didn't test that though). !! Important: Rename .env.example to .env. There you can change the environment variables !!
+   - 1.2. As of time of writing this, I have an instance of the program running on my own server at `dsmddnscloudflare.abmgrt.dev`. If you can't setup an own instance of the application, you can use this domain in the next step. But remember that I can change the domain or shut down this instance at any time. **By using this instance that this domain you agree that you are responsible for any type of damage. While unlikely, you're still sharing your Cloudflare API Token with my server.**
 
 2. In DSM, go to "Control Panel" -> "External Access" -> "DDNS" and click "Customize Provider". Set the Name to Cloudflare and the Query URL to the following string:
 
 `https://dns.your.domain/update?hostname=__HOSTNAME__&ip=__MYIP__&zone=__USERNAME__&key=__PASSWORD__`
 
-3. Replace `dns.your.domain` with the domain or IP address to the running NodeJS application. (Words surrounded by "\_\_" are variables by DSM)
+3. Replace `dns.your.domain` with the domain or IP address to the running NodeJS application. (Words surrounded by "\_\_" are variables by DSM, **DO NOT CHANGE THEM UNLESS YOU KNOW WHAT YOU'RE DOING**)
 4. Click "Save"
 5. In the upper-left corner, click "add" and select "\*Cloudflare"
 6. Set "Hostname" to the hostname you want to update
