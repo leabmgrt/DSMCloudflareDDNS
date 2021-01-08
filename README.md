@@ -1,6 +1,8 @@
 # DSMCloudflareDDNS
 
-An API to forward Synology DMS DDNS requests to Cloudflare
+An API to forward Synology DMS DDNS requests to Cloudflare.
+
+This application is heavily inspired by [SynologyCloudflareDDNS](https://github.com/joshuaavalon/SynologyCloudflareDDNS). The differnece is that this is an API while SynologyCloudflareDDNS is a shell script. _I think_ it's easier to add a custom DDNS provider via DSM instead of ssh'ing into the system to add a file to a system directory.
 
 ## Why?
 
